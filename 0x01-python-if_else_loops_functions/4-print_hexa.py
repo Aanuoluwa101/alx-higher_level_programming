@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for _ in range(99):
-    print(f"{_} = {hex(_)}")
+for i in range(99):
+    print("{0} = {1}".format(i, hex(i)))
