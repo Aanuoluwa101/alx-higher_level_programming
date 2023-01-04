@@ -7,6 +7,3 @@ def print_last_digit(number):
 
     print("{}".format(last), end="")
     return last
-
-
-print_last_digit(98)
