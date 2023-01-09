@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "#!/usr/bin/python3" > $1
+vim $1
+
+chmod u+x $1
+
+python3 $1
