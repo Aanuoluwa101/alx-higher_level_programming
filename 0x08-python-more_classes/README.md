@@ -1,1 +1,1 @@
-More on classes in python
+More on classes and objects in python
