@@ -1,0 +1,56 @@
+Importing the object from the module:
+	>>>lst = __import__("1-my_list").MyList
+
+Checking for module docstring:
+	>>> m = __import__("1-my_list").__doc__
+	>>> len(m) > 1
+	True
+
+Checking for function docstring:
+	>>> c = __import__("1-my_list").print_sorted.__doc__
+	>>> len(c) > 1
+	True
+
+Checking too many arguments to print_sorted:
+        >>>lst1 = lst()
+	>>>lst1.append(1)
+	>>>lst1.append(2)
+	>>>lst1.print_sorted(1)
+	Traceback (most recent call last):
+	...
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+Checking with an empty list:
+	>>>lst2 = lst()
+	>>>lst2.print_sorted()
+	[]
+
+Checking with a list of unordered positive integers:
+	>>>lst3 = lst()
+	>>>lst3.append(2)
+	>>>lst3.append(4)
+	>>>lst3.append(1)
+	[1, 2, 4]
+
+Checking with a list of unordered negative integers:
+	>>>lst3 = lst()
+	>>>lst3.append(-1)
+	>>>lst3.append(-10)
+	>>>lst3.append(-5)
+	[-10, -5, -1]
+
+
+Checking with a list of ordered positive integers:
+	>>>lst3 = lst()
+	>>>lst3.append(1)
+	>>>lst3.append(2)
+	>>>lst3.append(3)
+	[1, 2, 3]
+
+Checking with a list of ordered negative integers:
+	>>>lst3 = lst()
+	>>>lst3.append(-10)
+	>>>lst3.append(-5)
+	>>>lst3.append(-3)
+	[-10, -5, -3]
+
