@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines a JSON serialization function"""
-import json
 
 
 def class_to_json(obj):
@@ -13,4 +12,4 @@ def class_to_json(obj):
         (list, dictionary, string, integer and boolean)
         for JSON serialization of an object
     """
-    return (json.dumps(obj.__dict__))
+    return obj.__dict__
