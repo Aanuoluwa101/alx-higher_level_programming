@@ -1,31 +1,33 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """Defines a class Square based on the Rectangle class"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Initializes a square
-        
+
         Args:
             size (int): the size (width and height) of the square
         """
         super().__init__(size, size, x, y, id)
-        
+
     def __str__(self):
         """Returns a string representation of the square"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
-        
+        return "[Square] ({}) {}/{} - {}"\
+            .format(self.id, self.x, self.y, self.size)
+
     @property
     def size(self):
         """Get size"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """Set size"""
         self.width = value
         self.height = value
-        
+
     def update(self, *args, **kwargs):
         """Update the Square.
         Args:
@@ -65,7 +67,7 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
-        
+
     def to_dictionary(self):
         """Returns a dictionary representation of the square"""
         return {
