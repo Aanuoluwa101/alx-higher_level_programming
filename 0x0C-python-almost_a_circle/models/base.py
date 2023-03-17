@@ -97,6 +97,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Write the CSV serialization of a list of objects to a file.
+
         Args:
             list_objs (list): A list of inherited Base instances.
         """

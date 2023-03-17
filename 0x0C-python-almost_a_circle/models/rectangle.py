@@ -108,7 +108,7 @@ class Rectangle(Base):
             args (list): list of arguments for
             the attributes to be updated in the order of
             id, width, height, x and y
-            **kwargs (dictionary): dictionary of attribute/value
+            kwargs (dictionary): dictionary of attribute/value
         """
         if args and args is not []:
             a = 0

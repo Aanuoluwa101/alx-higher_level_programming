@@ -1,2 +1,2 @@
 Almost a circle project
-Applying everything we have learned in python so far
+Almost a circle: putting everything learnt so far in python together
