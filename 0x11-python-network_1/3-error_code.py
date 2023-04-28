@@ -5,10 +5,11 @@ import urllib.request as request
 import urllib.error
 import sys
 
-url = sys.argv[1]
-try:
-    with request.urlopen(url) as response:
-        data = response.read().decode('utf-8')
-        print(data)
-except urllib.error.HTTPError as e:
-    print("Error code: {}".format(e.code))
+if __name__ == '__main__':
+    url = sys.argv[1]
+    try:
+        with request.urlopen(url) as response:
+            data = response.read().decode('utf-8')
+            print(data)
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))

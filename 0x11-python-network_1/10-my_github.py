@@ -4,12 +4,13 @@
 import requests
 import sys
 
-username = sys.argv[1]
-psswd = sys.argv[2]
-url = "https://api.github.com/users/" + username
-token = 'Bearer ' + psswd
-headers = {'Authorization': token,
-           'X-GitHub-Api-Version': '2022-11-28'}
-r = requests.get(url, headers=headers)
-data = r.json()
-print(data['id'])
+if __name__ == '__main__':
+    username = sys.argv[1]
+    psswd = sys.argv[2]
+    url = "https://api.github.com/users/" + username
+    token = 'Bearer ' + psswd
+    headers = {'Authorization': token,
+               'X-GitHub-Api-Version': '2022-11-28'}
+    r = requests.get(url, headers=headers)
+    data = r.json()
+    print(data['id'])

@@ -4,17 +4,18 @@
 import requests
 import sys
 
-url = 'http://0.0.0.0:5000/search_user'
-if len(sys.argv) == 1:
-    q = ""
-else:
-    q = sys.argv[1]
-r = requests.post(url, data={'q': q})
-try:
-    data = r.json()
-    if data:
-        print('[{}] {}'.format(data['id'], data['name']))
+if __name__ == '__main__':
+    url = 'http://0.0.0.0:5000/search_user'
+    if len(sys.argv) == 1:
+        q = ""
     else:
-        print('No result')
-except requests.exceptions.JSONDecodeError:
-    print('Not a valid JSON')
+        q = sys.argv[1]
+    r = requests.post(url, data={'q': q})
+    try:
+        data = r.json()
+        if data:
+            print('[{}] {}'.format(data['id'], data['name']))
+        else:
+            print('No result')
+    except requests.exceptions.JSONDecodeError:
+        print('Not a valid JSON')
